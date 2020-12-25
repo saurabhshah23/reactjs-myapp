@@ -1,11 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+// Handle console logs
+import 'utils/dropConsole';
 import './App.css';
+import logo from './assets/images/logo.svg';
+import {SharedComp, ComplexShared} from './components';
+// import Home from "./pages/Home"
+import Home from "pages/Home"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <SharedComp />
+        <Home />
+        <ComplexShared />
+        <img src={logo} width="50px" className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
