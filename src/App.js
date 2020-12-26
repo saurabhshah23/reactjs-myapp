@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // Handle console logs
 import "utils/dropConsole";
+// Styles
 import "fontsource-roboto";
-import "./App.css";
 import logo from "./assets/images/logo.svg";
 import { SharedComp, ComplexShared } from "./components";
 // ROUTER
@@ -15,6 +15,7 @@ import { ThemeProvider, Button, createMuiTheme } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
 import { ThemeSwitch } from "components/ThemeSwitch";
 import { dark, light } from "styles/muiTheme";
+import "./App.css";
 
 function App() {
   const [darkState, setDarkState] = useState(true);
