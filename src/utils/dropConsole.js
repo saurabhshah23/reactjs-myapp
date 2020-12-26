@@ -5,7 +5,7 @@
 var console = (function (oldCons) {
     // eslint-disable-next-line no-undef
     // let drop = "true" === process.env.REACT_APP_DROP_CONSOLE ? true : false;
-    let drop = false;
+    let drop = true;
     let newCons = { ...oldCons };
     window.consol = oldCons; // A quick handle to be able to use consoles on app. Use consol instead of console
     if (drop) {
