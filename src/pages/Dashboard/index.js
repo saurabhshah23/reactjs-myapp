@@ -1,1 +1,1 @@
-export {DashboardView as default} from "./DashboardView";
+export {DashboardContainer as default} from "./DashboardContainer";

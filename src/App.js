@@ -37,27 +37,8 @@ function App() {
           </BrowserRouter>
         </ThemeProvider>
       </div>
-      <div style={{ display: "block" }}>
-        <br />
-        <hr />
-        <header className="App-header">
-          <SharedComp />
-          <Home />
-          <ComplexShared />
-          <img src={logo} width="50px" className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+
+
     </>
   );
 }

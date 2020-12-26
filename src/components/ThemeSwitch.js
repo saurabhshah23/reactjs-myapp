@@ -5,7 +5,6 @@ import { Switch, Button } from "@material-ui/core";
 export const ThemeSwitch = ({ darkState, handleThemeChange }) => {
     return (
     <div>
-      <h2>hello</h2>
       <Switch checked={darkState} onChange={handleThemeChange} />
       <Button
         variant="contained"
@@ -14,7 +13,7 @@ export const ThemeSwitch = ({ darkState, handleThemeChange }) => {
           console.log("Btn clicked!");
         }}
       >
-        Test Button
+        Theme Test
       </Button>
     </div>
   );
