@@ -3,22 +3,18 @@ import React, { useState } from "react";
 import "utils/dropConsole";
 // Styles
 import "fontsource-roboto";
-import logo from "./assets/images/logo.svg";
-import { SharedComp, ComplexShared } from "./components";
 // ROUTER
-import Home from "pages/Home";
 import { BrowserRouter } from "react-router-dom";
 import { RouterConfig } from "navigation/RouterConfig";
 // MUI Theme
 import { ThemeProvider, Button, createMuiTheme } from "@material-ui/core";
-// import theme from "styles/muiTheme";
-import { Typography } from "@material-ui/core";
 import { ThemeSwitch } from "components/ThemeSwitch";
 import { dark, light } from "styles/muiTheme";
 import "./App.css";
+import { ProvideAuth } from "navigation/Auth/ProvideAuth";
 
 function App() {
-  const [darkState, setDarkState] = useState(true);
+  const [darkState, setDarkState] = useState(false);
   const handleThemeChange = () => {
     setDarkState(!darkState);
     console.log("theme=", darkState ? "dark" : "light");
@@ -32,13 +28,13 @@ function App() {
             darkState={darkState}
             handleThemeChange={handleThemeChange}
           />
-          <BrowserRouter>
-            <RouterConfig />
-          </BrowserRouter>
+          <ProvideAuth>
+            <BrowserRouter>
+              <RouterConfig />
+            </BrowserRouter>
+          </ProvideAuth>
         </ThemeProvider>
       </div>
-
-
     </>
   );
 }
