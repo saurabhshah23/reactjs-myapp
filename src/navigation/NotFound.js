@@ -1,16 +1,14 @@
 import React from "react";
-// import { Typography, Button } from "@material-ui/core";
-// import { Link } from "react-router-dom";
+import { Typography } from "@material-ui/core";
+import { LinkRoute } from "components/LinkRoute";
+import { ROOT } from "./CONSTANTS";
 
 export const NotFound = () => {
   return (
-    <div>
-      {/* <Typography variant="h2">404: page not found!</Typography>
-
-      <Button variant="contained" color="primary" href="/">
-        Go Home
-      </Button> */}
-      Page Not Found!
-    </div>
+    <>
+      {/* Page Not Found! */}
+      <LinkRoute to={ROOT}>Home</LinkRoute>
+      <Typography variant="h2">404: page not found!</Typography>
+    </>
   );
 };
