@@ -16,12 +16,13 @@ function LoadingButton(props) {
   const {
     children,
     isLoading,
+    ...rest
   } = props;
   const classes = useStyles();
   return (
     <>
       <Button
-        {...props}
+        {...rest}
         variant={props.variant || "contained"}
         color={props.color || "primary"}
         disabled={isLoading || props.disabled}
