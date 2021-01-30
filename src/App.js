@@ -12,6 +12,9 @@ import { ThemeSwitch } from "components/ThemeSwitch";
 import { dark, light } from "styles/muiTheme";
 import "./App.css";
 import { ProvideAuth } from "navigation/Auth/ProvideAuth";
+// Redux
+import { Provider } from "react-redux";
+import {store} from "redux/store";
 
 function App() {
   const [darkState, setDarkState] = useState(false);
@@ -23,17 +26,19 @@ function App() {
   return (
     <>
       <div>
-        <ThemeProvider theme={darkState ? dark() : light()}>
-          <ThemeSwitch
-            darkState={darkState}
-            handleThemeChange={handleThemeChange}
-          />
-          <ProvideAuth>
-            <BrowserRouter>
-              <RouterConfig />
-            </BrowserRouter>
-          </ProvideAuth>
-        </ThemeProvider>
+        <Provider store={store}>
+          <ThemeProvider theme={darkState ? dark() : light()}>
+            <ThemeSwitch
+              darkState={darkState}
+              handleThemeChange={handleThemeChange}
+            />
+            <ProvideAuth>
+              <BrowserRouter>
+                <RouterConfig />
+              </BrowserRouter>
+            </ProvideAuth>
+          </ThemeProvider>
+        </Provider>
       </div>
     </>
   );
